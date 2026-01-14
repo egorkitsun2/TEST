@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренажер СУБД | Дистанционное обучение</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="quiz-header">
+            <div class="info-line">
+                <span id="category-label" class="badge">Категория: Архитектура</span>
+                <span id="question-counter">Вопрос 1 / 85</span>
+            </div>
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+        </header>
+
+        <main class="quiz-card">
+            <h2 id="question-text">Загрузка вопроса...</h2>
+            
+            <div id="options-list" class="options-grid">
+                </div>
+        </main>
+
+        <section id="feedback-panel" class="feedback-container hidden">
+            <div class="feedback-content">
+                <div id="answer-status" class="status-icon"></div>
+                <div class="text-info">
+                    <h3 id="status-title">Верно!</h3>
+                    <p id="extra-info-text"></p>
+                </div>
+            </div>
+            <button id="next-btn" class="primary-button">Следующий вопрос →</button>
+        </section>
+
+        <section id="result-screen" class="result-card hidden">
+            <h2>Тестирование завершено!</h2>
+            <div class="score-circle">
+                <span id="final-score">0</span>
+                <small>из 85</small>
+            </div>
+            <p id="result-comment"></p>
+            <button onclick="location.reload()" class="secondary-button">Пройти заново</button>
+        </section>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
